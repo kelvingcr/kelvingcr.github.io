@@ -3,60 +3,59 @@
     <button (click)="navigateToCreate()" class="mat-elevation-z8" mat-raised-button color="primary">CRIAR NOVA ORDEM DE SERVIÇO</button>
 </div>
 
-<div class="mat-elevation-z8 container">
-    <table mat-table [dataSource]="dataSource">
+<div>
+    <mat-table [dataSource]="dataSource">
 
         <!-- Position Column -->
         <ng-container matColumnDef="cliente">
-            <th mat-header-cell *matHeaderCellDef> Cliente </th>
-            <td mat-cell *matCellDef="let element"> {{element.cliente}} </td>
+            <mat-header-cell *matHeaderCellDef> Cliente </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.cliente}} </mat-cell>
         </ng-container>
 
         <!-- Name Column -->
         <ng-container matColumnDef="tecnico">
-            <th mat-header-cell *matHeaderCellDef> Técnico </th>
-            <td mat-cell *matCellDef="let element"> {{element.tecnico}} </td>
+            <mat-header-cell *matHeaderCellDef> Técnico </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.tecnico}} </mat-cell>
         </ng-container>
 
         <!-- Weight Column -->
         <ng-container matColumnDef="abertura">
-            <th mat-header-cell *matHeaderCellDef> Data de Abertura </th>
-            <td mat-cell *matCellDef="let element"> {{element.dataabertura}} </td>
+            <mat-header-cell *matHeaderCellDef> Data de Abertura </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.dataabertura}} </mat-cell>
         </ng-container>
 
         <!-- Symbol Column -->
         <ng-container matColumnDef="fechamento">
-            <th mat-header-cell *matHeaderCellDef> Data de Fechamento </th>
-            <td mat-cell *matCellDef="let element"> {{element.datafechamento}} </td>
+            <mat-header-cell *matHeaderCellDef> Data de Fechamento </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.datafechamento}} </mat-cell>
         </ng-container>
 
         <ng-container matColumnDef="prioridade">
-            <th mat-header-cell *matHeaderCellDef> Prioridade </th>
-            <td mat-cell *matCellDef="let element" class="{{ prioridade(element.prioridade) }}"> {{element.prioridade}} </td>
+            <mat-header-cell *matHeaderCellDef> Prioridade </mat-header-cell>
+            <mat-cell *matCellDef="let element" class="{{ prioridade(element.prioridade) }}"> {{element.prioridade}} </mat-cell>
         </ng-container>
 
         <ng-container matColumnDef="status">
-            <th mat-header-cell *matHeaderCellDef> Status </th>
-            <td mat-cell *matCellDef="let element"> {{element.status}} </td>
+            <mat-header-cell *matHeaderCellDef> Status </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.status}} </mat-cell>
         </ng-container>
 
         <ng-container matColumnDef="action">
-            <th mat-header-cell *matHeaderCellDef> Ações </th>
-            <td mat-cell *matCellDef="let element">
+            <mat-header-cell *matHeaderCellDef> Ações </mat-header-cell>
+            <mat-cell *matCellDef="let element">
                 <a routerLink="update/{{ element.id }}">
                     <i id="edit" class="material-icons">edit</i>
                 </a>
                 <a routerLink="view/{{element.id}}">
                     <i id="delete" class="material-icons">visibility</i>
                 </a>
-            </td>
+            </mat-cell>
         </ng-container>
 
 
-        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-    </table>
-
-    <mat-paginator [pageSizeOptions]="[5, 10, 20, 50]" showFirstLastButtons aria-label="Select page of periodic elements">
-    </mat-paginator>
+        <mat-header-row *matHeaderRowDef="displayedColumns">
+        </mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns;">
+        </mat-row>
+    </mat-table>
 </div>

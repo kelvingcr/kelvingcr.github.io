@@ -1,5 +1,36 @@
-.mat-card {
-    width: 80%;
-    height: 50%;
-    margin: 1rem auto 0 auto;
+h1 {
+    font-size: 50px;
+}
+
+.p1 {
+    font-size: 16px;
+    color: rgb(200, 200, 200);
+    margin-top: 2rem;
+}
+
+.p2 {
+    color: rgb(200, 200, 200);
+}
+
+@media screen and (max-width:480px) {
+    img {
+        width: 300px;
+        margin-left: 10px;
+    }
+    h1 {
+        font-size: 40px;
+    }
+    .p1 {
+        font-size: 14px;
+        margin: 80;
+        margin-top: 1rem;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    .p2 {
+        font-size: 12px;
+        margin: 80;
+        position: relative;
+        top: 490px;
+    }
 }

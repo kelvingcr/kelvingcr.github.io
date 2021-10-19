@@ -1,4 +1,4 @@
-<form class="form mat-elevation-z8">
+<form>
     <h1>Criando novo técnico</h1>
     <mat-form-field class="full-width" appearance="fill">
         <mat-label>Nome</mat-label>
@@ -17,4 +17,5 @@
     </mat-form-field>
     <button class="mat-elevation-z8" (click)="create()" [disabled]="errorValidName() || errorValidCPF() || errorValidTelefone()" mat-raised-button color="accent">Criar</button>
     <button class="mat-elevation-z8" (click)="cancel()" mat-raised-button color="warn">Cancelar</button>
+
 </form>

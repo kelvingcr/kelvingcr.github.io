@@ -1,3 +1,4 @@
+import { analyzeAndValidateNgModules } from '@angular/compiler';
 import { Route } from '@angular/compiler/src/core';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -14,8 +15,8 @@ export class OsViewComponent implements OnInit {
   constructor(private route: ActivatedRoute,
     private service : OsService,
     private router : Router) { 
-
   }
+
 
   os: OS = {
     tecnico: '',
